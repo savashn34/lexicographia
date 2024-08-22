@@ -1,0 +1,105 @@
+.box {
+    margin-top: 20px;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    width: 20%;
+    height: 2.5rem;
+    color: green;
+    border: 2px solid green;
+    border-radius: 4px;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+    background: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    border-color: darkgreen;
+    background-color: rgba(0, 128, 0, 0.1);
+}
+
+.content {
+    width: 70%;
+    padding: 70px 0;
+    margin: auto;
+    max-width: 850px;
+    text-align: left;
+    font-size: larger;
+    line-height: 1.5;
+}
+
+.list {
+    padding-bottom: 15px;
+    font-size: 25px;
+    display: inline-block;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.4s ease, border-bottom 0.4s ease;
+}
+
+.link:hover {
+    color: lightgray;
+    border-bottom: 2px solid lightgray;
+}
+
+.table {
+    margin: auto;
+    text-align: center;
+    border: 1px solid white;
+    color: white;
+    opacity: 0.8;
+}
+
+.table table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table table tbody tr th {
+    border: 1px solid white;
+}
+
+.table tr:hover {
+    background-color: rgb(83, 83, 83);
+    font-size: 102%;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+}
+
+.table th {
+    border: 1px solid black;
+    padding: 4%;
+    width: 33.33%;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+
+    .content {
+        padding: 70px 50px;
+    }
+
+    .button {
+        width: 50%;
+    }
+
+    .table {
+        font-size: medium;
+    }
+
+}

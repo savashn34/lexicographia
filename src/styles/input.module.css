@@ -1,0 +1,308 @@
+.alert {
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    border: 1px solid;
+    margin: 20px 0;
+}
+
+.alertGreen {
+    border-color: #4caf50;
+    color: #4caf50;
+}
+
+.alertRed {
+    border-color: #f44336;
+    color: #f44336;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+
+.fields {
+    align-items: left;
+    justify-content: left;
+    margin: 100px 200px;
+    max-width: 30rem;
+    text-align: left;
+}
+
+.label {
+    margin-top: 1rem;
+}
+
+.textarea {
+    height: 10rem;
+    font-family: inherit;
+}
+
+.input {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 4px;
+    background-color: #444;
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, border-width 0.1s linear;
+}
+
+.input::placeholder {
+    color: #ccc;
+}
+
+.input:focus {
+    outline: none;
+    border-color: rgb(21, 117, 69);
+    border-width: 0.3rem;
+}
+
+.box {
+    width: 100%;
+    max-width: 30rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #444;
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.box::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -2rem;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+.headField {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    padding: 0.5rem;
+    position: relative;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+}
+
+.headField::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0rem;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+.box h5 {
+    margin-top: 1.5rem;
+}
+
+.icons {
+    margin-left: auto;
+    margin-right: 0.1rem;
+}
+
+.iconDelete,
+.iconAdd,
+.iconUp,
+.iconDown {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 0rem 0.2rem;
+}
+
+.iconDelete:hover {
+    color: red;
+    transform: scale(1.2);
+}
+
+.iconAdd:hover {
+    color: green;
+    transform: scale(1.2);
+}
+
+.iconUp:hover,
+.iconDown:hover {
+    color: blue;
+    transform: scale(1.2);
+}
+
+.button {
+    width: 8rem;
+    height: 2.5rem;
+    border: 2px solid;
+    border-radius: 4px;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+    background-color: rgba(0, 128, 0, 0.1);
+}
+
+.button.delete {
+    color: red;
+    border-color: red;
+}
+
+.button.delete:hover {
+    border-color: darkred;
+}
+
+.button.save {
+    color: green;
+    border-color: green;
+}
+
+.button.save:hover {
+    border-color: darkgreen;
+}
+
+.singleButtonDiv {
+    float: right;
+    margin-top: 2rem;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    background: rgb(24, 26, 27);
+    border: 2px solid #000;
+    box-shadow: 24px 24px 24px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.modalTitle {
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.modalDescription {
+    margin: 2rem 0rem;
+    color: white;
+    line-height: 1.5rem;
+}
+
+.modalButtons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+}
+
+.button.cancel {
+    color: green;
+    border-color: green;
+}
+
+.button.cancel:hover {
+    border-color: darkgreen;
+}
+
+.button.confirm {
+    color: red;
+    border-color: red;
+}
+
+.button.confirm:hover {
+    border-color: darkred;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: row;
+}
+
+.groupLeft {
+    flex-direction: column;
+}
+
+.groupRight {
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.formLabel {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.checkbox {
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+    border: 2px solid white;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox:checked {
+    background-color: darkgreen;
+    border-color: darkgreen;
+}
+
+.checkbox:checked::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+
+@media (max-width: 768px) {
+
+    .fields {
+        margin: 35px;
+    }
+
+    .input {
+        max-width: 20rem;
+    }
+
+}

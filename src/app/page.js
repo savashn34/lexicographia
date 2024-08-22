@@ -1,95 +1,59 @@
-import Image from "next/image";
+import HeaderMain from "@/components/HeaderMain";
 import styles from "./page.module.css";
+import Link from "next/link";
+
+export const metadata = {
+  title: 'Lexicographia',
+  description: 'Lexicograhia is an open source web application that allows lexicographers to create and publish their own dictionaries. It focused on to give all the tools that a lexicographer may need, while saving its simplicity and ease of use.'
+}
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
+    <>
+      <HeaderMain />
+
+      <div className={`${styles.content}`}>
+
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;
+          Lexicograhia is an open source web application that allows lexicographers to create and publish their own dictionaries. It focused on to give all the tools that a lexicographer may need, while saving its simplicity and ease of use.
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+
+        <br />
+
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;
+          Here is some of the reasons that made Lexicographia must be exist:
+        </p>
+
+        <br />
+
+        <ul style={{ paddingLeft: '50px' }}>
+          <li>
+            People who want to create a dictionary for some reasons.
+          </li>
+          <li>
+            To support lexicography and linguistic studies conducted by universities.
+          </li>
+          <li>
+            Ensure the documentation of the endangered languages to prevent them from being completely forgotten.
+          </li>
+          <li>
+            Creating specific dictionaries like a dictionary of the local dialects, dictionary of slangs, dictionary of botanical terms, dictionary of the loan words etc.
+          </li>
+          <li>
+            To give opportunities for the people who interest in artifical languages.
+          </li>
+          <li>
+            Students who want to create their own wordbooks while learning a foreign language.
+          </li>
+        </ul>
+
+        <br />
+
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;
+          If you would like to get more information about The Lexicographia; see the <Link href={'/about'} style={{ color: 'rgb(30, 144, 255)' }}>About</Link> page.
+        </p>
+
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   );
 }
