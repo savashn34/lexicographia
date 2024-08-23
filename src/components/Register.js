@@ -27,6 +27,9 @@ function Register() {
         };
 
         try {
+            console.log('API URL:', apiUrl);
+            console.log('Request URL:', `${apiUrl}/api/register`);
+
             if (password === rePassword) {
                 const res = await axios.post(`${apiUrl}/api/register`, postData);
 
