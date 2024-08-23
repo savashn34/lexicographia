@@ -7,10 +7,11 @@ export const metadata = {
 }
 
 export default async function Page() {
+    const apiUrl = process.env.API_URL;
     return (
         <>
             <HeaderMain />
-            <Login />
+            <Login apiUrl={apiUrl} />
         </>
     )
 }

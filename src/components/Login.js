@@ -4,7 +4,7 @@ import styles from '../styles/input.module.css';
 import axios from 'axios';
 import { useRouter } from "next/navigation";
 
-function Login() {
+function Login({ apiUrl }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -21,8 +21,8 @@ function Login() {
 
         try {
 
-            const apiUrl = process.env.API_URL;
-
+            console.log('API URL:', apiUrl);
+            console.log('Request URL:', `${apiUrl}/api/register`);
             const res = await axios.post(`${apiUrl}/login`, postData);
 
             if (res.status === 200 && res.data.token) {
