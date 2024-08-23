@@ -15,6 +15,8 @@ function Register() {
 
     const router = useRouter();
 
+    const apiUrl = process.env.API_URL;
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const postData = {
@@ -26,7 +28,7 @@ function Register() {
 
         try {
             if (password === rePassword) {
-                const res = await axios.post('http://127.0.0.1:4000/api/register', postData);
+                const res = await axios.post(`${apiUrl}/api/register`, postData);
 
                 if (res.data.error) {
                     setAlert({ message: 'Failed to creating user.', severity: 'error' });
