@@ -30,13 +30,16 @@ function Login() {
                 router.push('/');
             } else {
                 setAlert({ message: 'Failed to login.', severity: 'error' });
+                console.log(err)
             }
 
         } catch (err) {
             if (err.response && err.response.status === 400) {
                 setAlert({ message: err.response.data.message || 'Invalid username or password.', severity: 'error' });
+                console.log(err)
             } else {
                 setAlert({ message: 'An error occurred while logging in.', severity: 'error' });
+                console.log(err)
             }
         }
     }

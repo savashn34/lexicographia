@@ -44,8 +44,10 @@ function Register() {
         } catch (err) {
             if (err.response.data.message) {
                 setAlert({ message: err.response.data.message, severity: 'error' });
+                console.log(err)
             } else {
                 setAlert({ message: err.response.data, severity: 'error' });
+                console.log(err)
             }
         }
     }
