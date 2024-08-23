@@ -10,8 +10,6 @@ function Login() {
 
     const [alert, setAlert] = useState({ message: '', severity: '' });
 
-    const apiUrl = process.env.API_URL;
-
     const router = useRouter();
 
     const handleSubmit = async (e) => {
@@ -22,6 +20,9 @@ function Login() {
         };
 
         try {
+
+            const apiUrl = process.env.API_URL;
+
             const res = await axios.post(`${apiUrl}/login`, postData);
 
             if (res.status === 200 && res.data.token) {

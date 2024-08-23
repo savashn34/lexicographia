@@ -15,8 +15,6 @@ function Register() {
 
     const router = useRouter();
 
-    const apiUrl = process.env.API_URL;
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         const postData = {
@@ -27,6 +25,8 @@ function Register() {
         };
 
         try {
+
+            const apiUrl = process.env.API_URL;
             console.log('API URL:', apiUrl);
             console.log('Request URL:', `${apiUrl}/api/register`);
 
