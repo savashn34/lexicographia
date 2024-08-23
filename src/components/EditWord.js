@@ -6,7 +6,7 @@ import axios from 'axios';
 import { MdDeleteForever } from "react-icons/md";
 import { IoIosAddCircle } from "react-icons/io";
 
-function EditWord({ data }) {
+function EditWord({ data, apiUrl }) {
     const [word, setWord] = useState('');
     const [article, setArticle] = useState('');
     const [gender, setGender] = useState('');
@@ -27,8 +27,6 @@ function EditWord({ data }) {
     const alertRef = useRef(null)
     const [isEqFieldAdded, setIsEqFieldAdded] = useState(false);
     const [isDefFieldAdded, setIsDefFieldAdded] = useState(false);
-
-    const apiUrl = process.env.API_URL;
 
     useEffect(() => {
         const token = document.cookie.split('; ').find(row => row.startsWith('Authorization='))?.split('=')[1];

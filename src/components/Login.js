@@ -21,8 +21,6 @@ function Login({ apiUrl }) {
 
         try {
 
-            console.log('API URL:', apiUrl);
-            console.log('Request URL:', `${apiUrl}/api/register`);
             const res = await axios.post(`${apiUrl}/login`, postData);
 
             if (res.status === 200 && res.data.token) {

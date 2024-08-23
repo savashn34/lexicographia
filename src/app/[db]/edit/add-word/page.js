@@ -54,7 +54,7 @@ export default async function Page({ params }) {
         return (
             <>
                 <HeaderMain />
-                <AddWord data={data} />
+                <AddWord data={data} apiUrl={apiUrl} />
             </>
         )
     } else {

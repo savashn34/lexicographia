@@ -6,7 +6,7 @@ import axios from 'axios';
 import { MdDeleteForever } from "react-icons/md";
 import { IoIosAddCircle } from "react-icons/io";
 
-function AddWord({ data }) {
+function AddWord({ data, apiUrl }) {
     const [word, setWord] = useState('');
     const [etymology, setEtymology] = useState('');
     const [explanation, setExplanation] = useState('');
@@ -82,8 +82,6 @@ function AddWord({ data }) {
                 }))
             ]
         };
-
-        const apiUrl = process.env.API_URL;
 
         try {
             const res = await axios.post(`${apiUrl}/${data.url}/add/word`, postData, {

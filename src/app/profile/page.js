@@ -10,10 +10,10 @@ export const metadata = {
 }
 
 export default async function Page() {
+    const apiUrl = process.env.API_URL;
+
     const cookieStore = cookies();
     const token = cookieStore.get('Authorization')?.value;
-
-    const apiUrl = process.env.API_URL;
 
     if (!token) {
         redirect('/unauthorized');
@@ -32,7 +32,7 @@ export default async function Page() {
             return (
                 <>
                     <HeaderMain />
-                    <EditProfile data={data} />
+                    <EditProfile data={data} apiUrl={apiUrl} />
                 </>
             )
         } else if (response.err && response.err.status === 404) {

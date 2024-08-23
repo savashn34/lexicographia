@@ -9,6 +9,8 @@ export const metadata = {
 }
 
 export default async function Page() {
+    const apiUrl = process.env.API_URL;
+
     const cookieStore = cookies();
     const token = cookieStore.get('Authorization')?.value;
 
@@ -19,7 +21,7 @@ export default async function Page() {
     return (
         <>
             <HeaderMain />
-            <Register />
+            <Register apiUrl={apiUrl} />
         </>
     )
 }

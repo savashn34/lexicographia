@@ -54,7 +54,7 @@ export default async function Page({ params }) {
     return (
         <div>
             <HeaderMain />
-            <EditWord data={data} />
+            <EditWord data={data} apiUrl={apiUrl} />
         </div>
     )
 }

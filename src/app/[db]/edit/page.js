@@ -55,7 +55,7 @@ export default async function Page({ params }) {
     return (
         <div>
             <HeaderMain />
-            <EditDictionary data={data} />
+            <EditDictionary data={data} apiUrl={apiUrl} />
         </div>
     )
 }

@@ -7,11 +7,12 @@ export const metadata = {
 }
 
 export default async function Page() {
+    const apiUrl = process.env.API_URL;
 
     return (
         <>
             <HeaderMain />
-            <AddDictionary />
+            <AddDictionary apiUrl={apiUrl} />
         </>
     )
 }

@@ -4,7 +4,7 @@ import styles from '../styles/input.module.css';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 
-function EditDictionary({ data }) {
+function EditDictionary({ data, apiUrl }) {
     const [name, setName] = useState('');
     const [url, setUrl] = useState('');
     const [description, setDescription] = useState('');
@@ -29,8 +29,6 @@ function EditDictionary({ data }) {
     const alertRef = useRef(null)
 
     const router = useRouter();
-
-    const apiUrl = process.env.API_URL;
 
     useEffect(() => {
         setName(data.name || '');

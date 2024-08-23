@@ -5,7 +5,7 @@ import stylesword from '../styles/wordcard.module.css';
 import axios from 'axios';
 import { useRouter } from "next/navigation";
 
-function AddDictionary() {
+function AddDictionary({ apiUrl }) {
     const [name, setName] = useState('');
     const [url, setUrl] = useState('');
     const [description, setDescription] = useState('');
@@ -63,8 +63,6 @@ function AddDictionary() {
             roots,
             patterns
         }
-
-        const apiUrl = process.env.API_URL;
 
         try {
             const res = await axios.post(`${apiUrl}/create-dictionary`, postData, {

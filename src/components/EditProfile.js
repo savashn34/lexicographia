@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from '../styles/input.module.css';
 import axios from 'axios';
 
-function EditProfile({ data }) {
+function EditProfile({ data, apiUrl }) {
     const [name, setName] = useState('');
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
@@ -13,8 +13,6 @@ function EditProfile({ data }) {
     const [token, setToken] = useState('')
     const [alert, setAlert] = useState({ message: '', severity: '' });
     const alertRef = useRef(null)
-
-    const apiUrl = process.env.API_URL;
 
     useEffect(() => {
         const token = document.cookie.split('; ').find(row => row.startsWith('Authorization='))?.split('=')[1];

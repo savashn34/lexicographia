@@ -4,7 +4,7 @@ import styles from '../styles/input.module.css';
 import axios from 'axios';
 import { useRouter } from "next/navigation";
 
-function Register() {
+function Register({ apiUrl }) {
     const [name, setName] = useState('');
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
@@ -25,10 +25,6 @@ function Register() {
         };
 
         try {
-
-            const apiUrl = process.env.API_URL;
-            console.log('API URL:', apiUrl);
-            console.log('Request URL:', `${apiUrl}/api/register`);
 
             if (password === rePassword) {
                 const res = await axios.post(`${apiUrl}/api/register`, postData);
