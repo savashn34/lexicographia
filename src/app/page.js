@@ -50,7 +50,7 @@ export default function Home() {
         <br />
 
         <p>&nbsp;&nbsp;&nbsp;&nbsp;
-          If you would like to get more information about The Lexicographia; see the <Link href={'/about'} style={{ color: 'rgb(30, 144, 255)' }}>About</Link> page.
+          If you would like to get more information about The Lexicographia; see the <Link href={'/about'} style={{ color: 'rgb(30, 144, 255)' }}>About</Link> page. Also you can look at this example <Link href={'/ruslovar'} style={{ color: 'rgb(30, 144, 255)' }}>dictionary.</Link>
         </p>
 
       </div>
