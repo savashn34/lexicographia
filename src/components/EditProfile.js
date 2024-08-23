@@ -14,7 +14,7 @@ function EditProfile({ data }) {
     const [alert, setAlert] = useState({ message: '', severity: '' });
     const alertRef = useRef(null)
 
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const apiUrl = process.env.API_URL;
 
     useEffect(() => {
         const token = document.cookie.split('; ').find(row => row.startsWith('Authorization='))?.split('=')[1];

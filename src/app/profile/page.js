@@ -13,7 +13,7 @@ export default async function Page() {
     const cookieStore = cookies();
     const token = cookieStore.get('Authorization')?.value;
 
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const apiUrl = process.env.API_URL;
 
     if (!token) {
         redirect('/unauthorized');

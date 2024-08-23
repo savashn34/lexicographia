@@ -10,7 +10,7 @@ function Login() {
 
     const [alert, setAlert] = useState({ message: '', severity: '' });
 
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const apiUrl = process.env.API_URL;
 
     const router = useRouter();
 

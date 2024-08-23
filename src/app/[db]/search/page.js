@@ -11,7 +11,7 @@ export const metadata = {
 
 export default async function SearchPage({ params, searchParams }) {
     const searchTerm = searchParams.word || '';
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const apiUrl = process.env.API_URL;
 
     const results = await axios.get(`${apiUrl}/${params.db}/search`, {
         params: { word: searchTerm }

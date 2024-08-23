@@ -8,7 +8,7 @@ import { cache } from 'react';
 
 const fetchMetadata = cache(async (db, article) => {
     try {
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+        const apiUrl = process.env.API_URL;
 
         const response = await axios.get(`${apiUrl}/${db}/articles/${article}`);
         return response.data;
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Page({ params }) {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const apiUrl = process.env.API_URL;
 
     const res = await axios.get(`${apiUrl}/${params.db}/articles/${params.article}`);
     const dictData = res.data.dictionary;

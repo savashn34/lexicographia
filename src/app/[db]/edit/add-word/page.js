@@ -9,7 +9,7 @@ const fetchMetadata = cache(async (db) => {
     try {
         const cookieStore = cookies();
         const token = cookieStore.get('Authorization')?.value;
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+        const apiUrl = process.env.API_URL;
 
         const response = await axios.get(`${apiUrl}/${db}/add/word`, {
             headers: {
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
     const cookieStore = cookies();
     const token = cookieStore.get('Authorization')?.value;
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const apiUrl = process.env.API_URL;
 
     if (!token) {
         return <div>Error: Unauthorized</div>;

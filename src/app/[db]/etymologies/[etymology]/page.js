@@ -8,7 +8,7 @@ import { cache } from 'react';
 
 const fetchMetadata = cache(async (db, etymology) => {
     try {
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+        const apiUrl = process.env.API_URL;
 
         const response = await axios.get(`${apiUrl}/${db}/etymologies/${etymology}`);
         return response.data;
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Page({ params }) {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const apiUrl = process.env.API_URL;
 
     const res = await axios.get(`${apiUrl}/${params.db}/etymologies/${params.etymology}`);
     const dictData = res.data.dictionary;

@@ -28,7 +28,7 @@ function EditWord({ data }) {
     const [isEqFieldAdded, setIsEqFieldAdded] = useState(false);
     const [isDefFieldAdded, setIsDefFieldAdded] = useState(false);
 
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const apiUrl = process.env.API_URL;
 
     useEffect(() => {
         const token = document.cookie.split('; ').find(row => row.startsWith('Authorization='))?.split('=')[1];
