@@ -10,7 +10,7 @@ export default function RootTemplate({ children }) {
 
                 <div className={`${styles.footer}`}>
                     <p>
-                        lexicographia.org
+                        Lexicographia
                     </p>
 
                     <br />
