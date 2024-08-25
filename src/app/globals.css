@@ -87,7 +87,6 @@ video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -107,11 +106,6 @@ body {
   background-color: rgb(0, 0, 0);
   color: whitesmoke;
 }
-
-/* ol,
-ul {
-  list-style: none;
-} */
 
 blockquote,
 q {
