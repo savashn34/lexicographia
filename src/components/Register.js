@@ -27,7 +27,7 @@ function Register({ apiUrl }) {
         try {
 
             if (password === rePassword) {
-                const res = await axios.post(`${apiUrl}/api/register`, postData);
+                const res = await axios.post(`${apiUrl}/register`, postData);
 
                 if (res.data.error) {
                     setAlert({ message: 'Failed to creating user.', severity: 'error' });
